@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.core.cache import cache
-from haslib import md5
+from hashlib import md5
 from django.utils.encoding import smart_str
 from django.template.defaultfilters import slugify
 

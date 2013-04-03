@@ -4,7 +4,7 @@ import urlparse
 from django import template
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext as _
-from haslib import md5
+from hashlib import md5
 from django.core.urlresolvers import reverse
 
 from django.contrib.auth.models import User

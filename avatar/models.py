@@ -5,7 +5,7 @@ from django.db import models
 from django.core.files.base import ContentFile
 from django.core.files.storage import get_storage_class
 from django.utils.translation import ugettext as _
-from haslib import md5
+from hashlib import md5
 from django.utils.encoding import smart_str
 from django.db.models import signals
 
