@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.core.cache import cache
-from django.utils.hashcompat import md5_constructor
+from haslib import md5
 from django.utils.encoding import smart_str
 from django.template.defaultfilters import slugify
 
@@ -20,7 +20,7 @@ def get_cache_key(user_or_username, size, prefix):
         user_or_username = user_or_username.username
     key = u'%s_%s_%s' % (prefix, user_or_username, size)
     return u'%s_%s' % (slugify(key)[:100],
-                       md5_constructor(smart_str(key)).hexdigest())
+                       md5(smart_str(key)).hexdigest())
 
 
 def cache_result(func):
